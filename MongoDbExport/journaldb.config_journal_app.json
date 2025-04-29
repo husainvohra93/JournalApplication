@@ -1,0 +1,7 @@
+[{
+  "_id": {
+    "$oid": "680f7465b87d5fc4d2b0f5b3"
+  },
+  "key": "WEATHER_API",
+  "value": "http://api.weatherstack.com/current?access_key=apiKey&query=city"
+}]

@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "6808847e016ff650334da634"
+  },
+  "userName": "user1",
+  "password": "$2a$10$utt.aectvJfmtibcbj1UledtTBBQ74QKQfnMsn5yLThiHkl8Or7JS",
+  "journalEntries": [],
+  "roles": [
+    "USER",
+    "ADMIN"
+  ],
+  "_class": "com.example.JournalApplication.entity.UserEntity"
+}]

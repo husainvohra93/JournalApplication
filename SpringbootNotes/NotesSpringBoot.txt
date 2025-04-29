@@ -1,0 +1,14 @@
+Video Links
+
+https://www.youtube.com/watch?v=KSrXndTbVVQ&list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue&index=35
+
+1) To package the application on local with maven and passing which environment profile needs to consider while creating jar
+
+C:\Nilesh\JournalApplication\JournalApplication> .\mvnw clean package -D spring.profiles.active=prod
+
+2) To run the jar file while passing the profile in command line
+
+C:\Nilesh\JournalApplication\JournalApplication\target> java -jar .\JournalApplication-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+
+
+

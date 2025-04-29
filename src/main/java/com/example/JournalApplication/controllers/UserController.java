@@ -1,8 +1,10 @@
 package com.example.JournalApplication.controllers;
 
+import com.example.JournalApplication.api.response.WeatherResponse;
 import com.example.JournalApplication.entity.UserEntity;
 import com.example.JournalApplication.reposotirory.UserRepository;
 import com.example.JournalApplication.service.UserService;
+import com.example.JournalApplication.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,9 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private WeatherService weatherService;
+
     @PutMapping
     public ResponseEntity<Object> updateUser(@RequestBody UserEntity userEntity) throws Exception {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -36,5 +41,16 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         userRepository.deleteByUserName(authentication.getName());
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping
+    public ResponseEntity<?> greeting(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse = weatherService.getWeather("Mumbai");
+        String greeting = "";
+        if(weatherResponse!=null){
+            greeting =  ". Weather feels like " + weatherResponse.getCurrent().getFeelslike();
+        }
+        return new ResponseEntity<>("Hi " + authentication.getName() + greeting,HttpStatus.OK);
     }
 }

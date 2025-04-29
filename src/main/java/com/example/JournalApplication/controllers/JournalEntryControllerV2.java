@@ -46,7 +46,7 @@ public class JournalEntryControllerV2 {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();
         try {
-            journalEntryService.saveEntry(journalEntry, userName);
+            journalEntryService.saveEntry(journalEntry, userName, "Create");
             return new ResponseEntity<>(journalEntry, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
@@ -94,7 +94,7 @@ public class JournalEntryControllerV2 {
                 JournalEntry oldJE = journalEntry.get();
                 oldJE.setTitle(!newJE.getTitle().isEmpty() ? newJE.getTitle() : oldJE.getTitle());
                 oldJE.setContent(newJE.getContent() != null && !newJE.getContent().isEmpty() ? newJE.getContent() : oldJE.getContent());
-                journalEntryService.saveEntry(oldJE, userName);
+                journalEntryService.saveEntry(oldJE, userName , "Update");
                 return new ResponseEntity<>("Journal Updated Successfully... !!!", HttpStatus.OK);
             }
         }
