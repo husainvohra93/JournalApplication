@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "d9134c44-c967-4e08-9041-14f0c31ec032",
+		"name": "SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6296794"
+	},
+	"item": [
+		{
+			"name": "JournalApp",
+			"item": [
+				{
+					"name": "journal",
+					"item": [
+						{
+							"name": "CreateJournalEntriesForParticularUser",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"t1_1\",\r\n    \"content\" : \"c1_1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/journal-base/journal"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllJournalEntriesForParticularUser",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/journal"
+							},
+							"response": []
+						},
+						{
+							"name": "GetJounalEntryById",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/journal/id/68087972197bfd25f5136d19"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteJournalEntryByUserNameAndId",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:8081/journal-base/journal/id/68087972197bfd25f5136d19"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateJournalEntryByUserNameAndId",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user3",
+										"username": "user3"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"t1_2\",\r\n    \"content\" : \"c1_2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/journal-base/journal/id/68087997197bfd25f5136d1a"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "UpdateUserNamPassword",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user3",
+										"username": "user3"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\" : \"user1\",\r\n    \"password\" : \"user1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/journal-base/user"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUserByUsername",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:8081/journal-base/user"
+							},
+							"response": []
+						},
+						{
+							"name": "greetings",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/user"
+							},
+							"response": []
+						},
+						{
+							"name": "checkCriteriaUsers",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/user/checkCriteriaUsers"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "public",
+					"item": [
+						{
+							"name": "CreateUser",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\" : \"user1\",\r\n    \"password\" : \"user1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/journal-base/public/create-user"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/admin/all-users"
+							},
+							"response": []
+						},
+						{
+							"name": "create-admin",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user30",
+										"username": "user30"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\" : \"user31\",\r\n    \"password\" : \"user31\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8081/journal-base/admin/create-admin-user"
+							},
+							"response": []
+						},
+						{
+							"name": "ClearAppCache",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "user1",
+										"username": "user1"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8081/journal-base/admin/clear-app-cache"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
