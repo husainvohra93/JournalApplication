@@ -2,7 +2,8 @@ package com.example.JournalApplication.controllers;
 
 import com.example.JournalApplication.api.response.WeatherResponse;
 import com.example.JournalApplication.entity.UserEntity;
-import com.example.JournalApplication.reposotirory.UserRepository;
+import com.example.JournalApplication.repository.UserRepository;
+import com.example.JournalApplication.repository.UserRepositoryImpl;
 import com.example.JournalApplication.service.UserService;
 import com.example.JournalApplication.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -24,6 +27,9 @@ public class UserController {
 
     @Autowired
     private WeatherService weatherService;
+
+    @Autowired
+    private UserRepositoryImpl userRepositoryimpl;
 
     @PutMapping
     public ResponseEntity<Object> updateUser(@RequestBody UserEntity userEntity) throws Exception {
@@ -52,5 +58,14 @@ public class UserController {
             greeting =  ". Weather feels like " + weatherResponse.getCurrent().getFeelslike();
         }
         return new ResponseEntity<>("Hi " + authentication.getName() + greeting,HttpStatus.OK);
+    }
+
+    @GetMapping("/checkCriteriaUsers")
+    public ResponseEntity<?> getCriteriaUsers() {
+        List<UserEntity> allUsers = userRepositoryimpl.getUsersForSA();
+        if (allUsers != null && !allUsers.isEmpty()) {
+            return new ResponseEntity<>(allUsers, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }

@@ -1,7 +1,7 @@
 package com.example.JournalApplication.cache;
 
 import com.example.JournalApplication.entity.ConfigJournalAppEntity;
-import com.example.JournalApplication.reposotirory.ConfigJournalAppRepository;
+import com.example.JournalApplication.repository.ConfigJournalAppRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
