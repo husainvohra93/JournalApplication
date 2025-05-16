@@ -1,5 +1,6 @@
 package com.example.JournalApplication.entity;
 
+import com.example.JournalApplication.enums.Sentiment;
 import com.mongodb.lang.NonNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,4 +29,5 @@ public class JournalEntry {
     private String title;
     private String content;
     private LocalDateTime date;
+    private Sentiment sentiment;
 }

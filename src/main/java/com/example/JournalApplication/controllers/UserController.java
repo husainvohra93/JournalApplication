@@ -6,6 +6,7 @@ import com.example.JournalApplication.entity.JournalEntry;
 import com.example.JournalApplication.entity.UserEntity;
 import com.example.JournalApplication.repository.UserRepository;
 import com.example.JournalApplication.repository.UserRepositoryImpl;
+import com.example.JournalApplication.scheduler.UserScheduler;
 import com.example.JournalApplication.service.EmailService;
 import com.example.JournalApplication.service.UserService;
 import com.example.JournalApplication.service.WeatherService;
@@ -38,6 +39,9 @@ public class UserController {
 
     @Autowired
     private EmailService emailService;
+
+    @Autowired
+    UserScheduler userScheduler;
 
     @PutMapping
     public ResponseEntity<Object> updateUser(@RequestBody UserEntity userEntity) throws Exception {
@@ -87,6 +91,11 @@ public class UserController {
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
 
+    @GetMapping("/user-sentiment-email")
+    public ResponseEntity<?> emailuserSentiments() {
+        userScheduler.fetUsersAndSendSaMail();
+        return new ResponseEntity<>("Email sent successfully",HttpStatus.OK);
     }
 }
