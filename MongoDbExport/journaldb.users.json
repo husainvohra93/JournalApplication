@@ -3,11 +3,92 @@
     "$oid": "6808847e016ff650334da634"
   },
   "userName": "user1",
+  "email": "husain.vohra10@gmail.com",
+  "sentimentAnalysis": true,
   "password": "$2a$10$utt.aectvJfmtibcbj1UledtTBBQ74QKQfnMsn5yLThiHkl8Or7JS",
-  "journalEntries": [],
+  "journalEntries": [
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cc67dca7ea38e401495f"
+      }
+    }
+  ],
   "roles": [
     "USER",
     "ADMIN"
+  ],
+  "_class": "com.example.JournalApplication.entity.UserEntity"
+},
+{
+  "_id": {
+    "$oid": "6826ca44dca7ea38e4014955"
+  },
+  "userName": "user2",
+  "email": "husain.vohra10@gmail.com",
+  "sentimentAnalysis": true,
+  "password": "$2a$10$WgR.Btn7iPKR2CT6lFb8funBKgMsBJqN0F0BDvTPj9duSl2rIkFuq",
+  "journalEntries": [
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cb1ddca7ea38e4014958"
+      }
+    },
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cb26dca7ea38e4014959"
+      }
+    },
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cb39dca7ea38e401495a"
+      }
+    }
+  ],
+  "roles": [
+    "USER"
+  ],
+  "_class": "com.example.JournalApplication.entity.UserEntity"
+},
+{
+  "_id": {
+    "$oid": "6826ca92dca7ea38e4014957"
+  },
+  "userName": "user3",
+  "email": "hvohra930407@gmail.com",
+  "sentimentAnalysis": true,
+  "password": "$2a$10$XXH6sThkF8rpHaAZ28n4Quz.60EJsx.eFqaodUXU4HsOh.p//wV/6",
+  "journalEntries": [
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cb82dca7ea38e401495b"
+      }
+    },
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cbaddca7ea38e401495c"
+      }
+    },
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cc16dca7ea38e401495d"
+      }
+    },
+    {
+      "$ref": "journal_entries",
+      "$id": {
+        "$oid": "6826cc2fdca7ea38e401495e"
+      }
+    }
+  ],
+  "roles": [
+    "USER"
   ],
   "_class": "com.example.JournalApplication.entity.UserEntity"
 }]

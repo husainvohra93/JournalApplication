@@ -1,1 +1,82 @@
-[]
+[{
+  "_id": {
+    "$oid": "6826cb1ddca7ea38e4014958"
+  },
+  "title": "t2_1",
+  "content": "c2_1",
+  "date": {
+    "$date": "2025-05-16T05:20:29.790Z"
+  },
+  "sentiment": "HAPPY",
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cb26dca7ea38e4014959"
+  },
+  "title": "t2_2",
+  "content": "c2_2",
+  "date": {
+    "$date": "2025-05-16T05:20:38.010Z"
+  },
+  "sentiment": "HAPPY",
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cb39dca7ea38e401495a"
+  },
+  "title": "t2_3",
+  "content": "c2_3",
+  "date": {
+    "$date": "2025-05-16T05:20:57.074Z"
+  },
+  "sentiment": "SAD",
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cb82dca7ea38e401495b"
+  },
+  "title": "t3_1",
+  "content": "c3_1",
+  "date": {
+    "$date": "2025-05-16T05:22:10.611Z"
+  },
+  "sentiment": "SAD",
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cbaddca7ea38e401495c"
+  },
+  "title": "t3_2",
+  "content": "c3_2",
+  "date": {
+    "$date": "2025-05-16T05:22:53.769Z"
+  },
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cc2fdca7ea38e401495e"
+  },
+  "title": "t3_3",
+  "content": "c3_3",
+  "date": {
+    "$date": "2025-05-16T05:25:03.497Z"
+  },
+  "sentiment": "ANXIOUS",
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+},
+{
+  "_id": {
+    "$oid": "6826cc67dca7ea38e401495f"
+  },
+  "title": "t1_1",
+  "content": "c1_1",
+  "date": {
+    "$date": "2025-05-16T05:25:59.693Z"
+  },
+  "_class": "com.example.JournalApplication.entity.JournalEntry"
+}]
