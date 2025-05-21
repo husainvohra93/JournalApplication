@@ -1,0 +1,13 @@
+com\example\JournalApplication\reposotirory\UserRepository.class
+com\example\JournalApplication\controllers\UserController.class
+com\example\JournalApplication\entity\UserEntity.class
+com\example\JournalApplication\reposotirory\JournalEntryRepository.class
+com\example\JournalApplication\service\UserService.class
+com\example\JournalApplication\controllers\PublicController.class
+com\example\JournalApplication\service\UserDetailServiceImpl.class
+com\example\JournalApplication\config\SpringSecurity.class
+com\example\JournalApplication\service\JournalEntryService.class
+com\example\JournalApplication\entity\JournalEntry.class
+com\example\JournalApplication\controllers\JournalEntryControllerV2.class
+com\example\JournalApplication\controllers\AdminController.class
+com\example\JournalApplication\JournalApplication.class

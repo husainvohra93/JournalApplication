@@ -1,0 +1,36 @@
+spring:
+  data:
+    redis:
+      host: redis-18812.crce179.ap-south-1-1.ec2.redns.redis-cloud.com
+      port: 18812
+      username: default
+      password: fZhuEuHmOxhYHSSrQ9tpQgiZvFCMqQKK
+    #MongoDb running on local
+    mongodb:
+      host : localhost
+      port : 27017
+      database : journaldb
+      auto-index-creation : true
+  mail:
+    host: smtp.gmail.com
+    # Below port is used when starttls is enabled
+    port: 587
+    username: hvohra930407@gmail.com
+    #Below is appPassword from Google Account . It is located at Chrome--> manage Google Account ---> Security ---> 2 step verification ----> AppPassword(at bottom)
+    password: igih blbp avwa eoic
+    properties:
+      mail:
+        smtp:
+          auth: true
+          #starttls(Start Transport layer security) Below property is used to encrypt the data in transport
+          starttls:
+            enable: true
+
+server:
+  port: 8081
+  servlet:
+    context-path: /journal-base
+
+# Used in Weather API
+weather:
+  apiKey: 00c52c473de34815c587be887f40ceb2
