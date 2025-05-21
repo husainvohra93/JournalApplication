@@ -2,6 +2,8 @@ Video Links
 
 https://www.youtube.com/watch?v=KSrXndTbVVQ&list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue&index=35
 
+----------------------
+
 1) To package the application on local with maven and passing which environment profile needs to consider while creating jar
 
 C:\Nilesh\JournalApplication\JournalApplication> .\mvnw clean package -D spring.profiles.active=prod
@@ -9,6 +11,23 @@ C:\Nilesh\JournalApplication\JournalApplication> .\mvnw clean package -D spring.
 2) To run the jar file while passing the profile in command line
 
 C:\Nilesh\JournalApplication\JournalApplication\target> java -jar .\JournalApplication-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+--------------
+
+Database Concepts
+
+1) Query method DSL :
 
 
+- At Runtime , Springboot in itself injects the implementation of these repositories where this is used.
+- There is no function definition of callingthe MongoDb and writing select query to fetch from the table . In Springboot Query DSL ,you write the name
+of the function "findByUserName" such that "Username" in a field in database and Springboot understand that you are querying the MongoDb with UserName in input.
 
+Explaination in Video - https://www.youtube.com/watch?v=EL2ouT5P4Lc&list=PLA3GkZPtsafacdBLdd3p1DyRd5FGfr3Ue&index=35
+
+-----------------------------
+
+For Running Redis
+
+you need to be out of Infosys Network. Redis details are sent on email to "husain.vohra10@gmail.com" with subject "Redis cloud Cred for Journal app"
+
+Open Redis Cloud - https://app.redislabs.com on Google Chrome and Sign In with google - hvohra930407@gmail.com / <pass>
