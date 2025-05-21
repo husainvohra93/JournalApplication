@@ -1,8 +1,0 @@
-10:30:40:943 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer -Global AuthenticationManager configured with UserDetailsService bean with name userDetailServiceImpl
-10:30:42:151 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8081"]
-10:30:42:241 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port 8081 (http) with context path '/journal-base'
-10:30:42:285 [main] INFO  c.e.J.JournalApplication -Started JournalApplication in 751.605 seconds (process running for 753.244)
-10:30:42:296 [main] INFO  c.e.J.JournalApplication -Environment = dev
-10:30:46:075 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[.[/journal-base] -Initializing Spring DispatcherServlet 'dispatcherServlet'
-10:30:46:076 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
-10:30:46:080 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 2 ms

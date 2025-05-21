@@ -1,3 +1,0 @@
-12:42:28:365 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[.[/journal-base] -Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:42:28:378 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
-12:42:28:381 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 2 ms
