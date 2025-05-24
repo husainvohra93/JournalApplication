@@ -25,6 +25,30 @@ spring:
           #starttls(Start Transport layer security) Below property is used to encrypt the data in transport
           starttls:
             enable: true
+  kafka:
+    bootstrap-servers: pkc-l7pr2.ap-south-1.aws.confluent.cloud:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: husain-group
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.example.JournalApplication.model
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='TVTBMG2Q37L4T4D5' password='qLNGwVCk3Tl2O6dNomdaD+OJIJQrZzhsP2vYo2c5WaaugPM5qmnstsLSZKHBeWH7';
+      session:
+        timeout:
+          ms: 45000
 
 server:
   port: 8081

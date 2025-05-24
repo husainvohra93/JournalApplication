@@ -1,2 +1,8 @@
-11:39:06:227 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -Commencing graceful shutdown. Waiting for active requests to complete
-11:39:06:241 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -Graceful shutdown complete
+11:27:01:924 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown -Commencing graceful shutdown. Waiting for active requests to complete
+11:27:01:938 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown -Graceful shutdown complete
+11:27:01:952 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer -[Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+11:27:01:962 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics -Metrics scheduler closed
+11:27:01:963 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics -Closing reporter org.apache.kafka.common.metrics.JmxReporter
+11:27:01:963 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics -Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+11:27:01:964 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics -Metrics reporters closed
+11:27:01:965 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser -App info kafka.producer for producer-1 unregistered
